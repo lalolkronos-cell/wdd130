@@ -22,12 +22,14 @@ main {
     padding: 20px;
 }
 
-main h1 {
+/* h1 rule - independent selector */
+h1 {
     color: #2c3e50;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
+/* main img rule - independent selector */
 main img {
     width: 150px;
     height: auto;
@@ -47,9 +49,10 @@ aside {
     background-color: #64df64;
     color: #333;
     text-align: center;
-    box-shadow: 0 2px 4px   rgba(82, 155, 112, 0.1);
+    box-shadow: 0 2px 4px rgba(82, 155, 112, 0.1);
 }
 
+/* aside img rule - independent selector with exact specifications */
 aside img {
     width: 200px;
     height: auto;
