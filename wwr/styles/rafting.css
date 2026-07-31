@@ -3,7 +3,6 @@
     --secondary-blue: #2e86c1;
     --light-blue: #d4e6f1;
     --dark-blue: #0e2f44;
-    --accent-blue: #3498db;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -11,19 +10,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Makes sizing easier */
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--body-font);
     color: var(--dark-blue);
     background-image: url('../images/rafting_background.jpg');
-    background-size: cover; /* Makes background fill the whole screen */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Background stays still when scrolling */
+    background-attachment: fixed;
     min-height: 100vh;
-    display: flex; /* Helps center everything */
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -32,18 +31,18 @@ body {
 header, main, footer {
     max-width: 840px;
     width: 100%;
-    margin: 0 auto; /* Centers the boxes */
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.92);
     padding: 0 20px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 4px 20px rgba(26, 82, 118, 0.3);
 }
 
 header {
-    display: grid; /* Creates two columns: logo and nav */
+    display: grid;
     grid-template-columns: 120px 1fr;
     align-items: center;
-    gap: 20px; /* Space between logo and nav */
+    gap: 20px;
     padding: 15px 20px;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px 8px 0 0;
@@ -53,7 +52,7 @@ header {
 
 header img {
     max-width: 100%;
-    height: auto; /* Keeps picture looking normal */
+    height: auto;
     padding: 5px;
     border-radius: 8px;
     background-color: var(--light-blue);
@@ -62,9 +61,9 @@ header img {
 }
 
 header nav {
-    display: flex; /* Puts links in a row */
-    justify-content: flex-end; /* Pushes links to the right */
-    gap: 25px; /* Space between links */
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
     padding: 8px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -76,7 +75,7 @@ header nav a {
     font-weight: bold;
     padding: 8px 18px;
     border-radius: 4px;
-    transition: all 0.3s ease; /* Smooth changes */
+    transition: all 0.3s ease;
     white-space: nowrap;
     background-color: transparent;
     border: 1px solid transparent;
@@ -86,7 +85,7 @@ header nav a:hover {
     background-color: var(--primary-blue);
     color: white;
     border-color: var(--primary-blue);
-    transform: translateY(-2px); /* Lifts up when you hover */
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(26, 82, 118, 0.3);
 }
 
@@ -120,19 +119,19 @@ section {
 
 section h2 {
     margin-top: 0;
-    text-align: center; /* Centers section titles */
+    text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--light-blue);
 }
 
 section p {
     margin: 10px 0;
-    line-height: 1.6; /* Easier to read */
+    line-height: 1.6;
     color: var(--dark-blue);
 }
 
 .hero {
-    position: relative; /* For placing things on top of the picture */
+    position: relative;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -149,7 +148,7 @@ section p {
 }
 
 .hero h1 {
-    position: absolute; /* Puts title ON TOP of the picture */
+    position: absolute;
     top: 20px;
     left: 0;
     right: 0;
@@ -165,7 +164,7 @@ section p {
 }
 
 .hero article {
-    position: absolute; /* Puts white box ON TOP of the picture */
+    position: absolute;
     bottom: 40px;
     left: 40px;
     right: 40px;
@@ -177,7 +176,7 @@ section p {
 }
 
 .hero article img {
-    float: right; /* Pushes picture to the right */
+    float: right;
     width: 120px;
     margin: 0 0 10px 20px;
     border-radius: 4px;
@@ -190,14 +189,14 @@ section p {
 }
 
 .history-section {
-    display: grid; /* Three columns: text, picture, text */
+    display: grid;
     grid-template-columns: 1fr 200px 1fr;
     gap: 25px;
     align-items: start;
 }
 
 .history-section h2 {
-    grid-column: 1 / -1; /* Title spans all three columns */
+    grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -219,21 +218,20 @@ section p {
 }
 
 .adventures-section {
-    display: grid; /* Five equal columns for pictures */
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     padding: 20px;
 }
 
 .adventures-section h2 {
-    grid-column: 1 / -1; /* Title spans all five columns */
+    grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 15px;
 }
 
 .adventures-section figure {
     margin: 0;
-    padding: 0;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -242,20 +240,20 @@ section p {
 }
 
 .adventures-section figure:hover {
-    transform: translateY(-5px); /* Lifts up when you hover */
+    transform: translateY(-5px);
 }
 
 .adventures-section figure img {
     width: 100%;
     height: 150px;
-    object-fit: cover; /* Makes all pictures the same size */
+    object-fit: cover;
     border-radius: 8px;
     border: 2px solid var(--secondary-blue);
     transition: transform 0.3s ease;
 }
 
 .adventures-section figure img:hover {
-    transform: scale(1.05); /* Gets a little bigger when you hover */
+    transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(26, 82, 118, 0.3);
 }
 
@@ -270,8 +268,8 @@ section p {
 }
 
 footer {
-    display: flex; /* Puts copyright and social media in a row */
-    justify-content: space-between; /* Pushes them to opposite sides */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-top: 3px solid var(--primary-blue);
@@ -287,43 +285,45 @@ footer p {
 }
 
 .socialmedia {
-    display: flex; /* Puts social icons in a row */
-    gap: 12px;
-    justify-content: flex-end; /* Pushes icons to the right */
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .socialmedia a {
     display: inline-block;
-    padding: 8px;
-    border-radius: 50%; /* Makes it a circle */
+    padding: 10px;
+    border-radius: 50%;
     line-height: 0;
     text-decoration: none;
     transition: all 0.3s ease;
     background-color: var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .socialmedia a:hover {
-    transform: scale(1.15) rotate(5deg); /* Grows and spins a little! */
-    box-shadow: 0 4px 15px rgba(26, 82, 118, 0.4);
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(26, 82, 118, 0.5);
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: block;
-    filter: brightness(0) invert(1); /* Makes icons white */
+    filter: brightness(0) invert(1);
 }
 
 .socialmedia a:nth-child(1) {
-    background-color: #1877f2; /* Facebook blue */
+    background-color: #1877f2;
 }
 
 .socialmedia a:nth-child(2) {
-    background-color: #0a66c2; /* LinkedIn blue */
+    background-color: #0a66c2;
 }
 
 .socialmedia a:nth-child(3) {
-    background-color: #e4405f; /* Instagram pink */
+    background-color: #e4405f;
 }
 
 .socialmedia a:nth-child(1):hover {
@@ -338,37 +338,33 @@ footer p {
     background-color: #d13a54;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN - Changes for smaller screens
-   ============================================ */
-
 @media (max-width: 768px) {
     header {
-        grid-template-columns: 1fr; /* One column instead of two */
+        grid-template-columns: 1fr;
         text-align: center;
     }
     
     header nav {
-        flex-wrap: wrap; /* Links wrap to next line if needed */
+        flex-wrap: wrap;
         justify-content: center;
     }
     
     .history-section {
-        grid-template-columns: 1fr; /* One column instead of three */
+        grid-template-columns: 1fr;
         gap: 15px;
     }
     
     .history-section img {
         max-width: 200px;
-        margin: 0 auto; /* Centers the picture */
+        margin: 0 auto;
     }
     
     .adventures-section {
-        grid-template-columns: repeat(2, 1fr); /* Two pictures per row */
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .hero h1 {
-        font-size: 1.8rem; /* Smaller title for tablets */
+        font-size: 1.8rem;
         padding: 10px;
     }
     
@@ -380,21 +376,34 @@ footer p {
     }
     
     .hero article img {
-        width: 80px; /* Smaller picture for tablets */
+        width: 80px;
+    }
+    
+    .socialmedia img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .socialmedia a {
+        padding: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .adventures-section {
-        grid-template-columns: 1fr; /* One picture per row for phones */
+        grid-template-columns: 1fr;
     }
     
     .socialmedia {
-        gap: 8px;
+        gap: 10px;
     }
     
     .socialmedia img {
-        width: 24px; /* Smaller icons for phones */
-        height: 24px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .socialmedia a {
+        padding: 7px;
     }
 }
