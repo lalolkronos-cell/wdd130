@@ -284,6 +284,7 @@ footer p {
     color: var(--dark-blue);
 }
 
+/* SOCIAL MEDIA - Con imágenes visibles y sin filtros */
 .socialmedia {
     display: flex;
     gap: 15px;
@@ -293,51 +294,29 @@ footer p {
 
 .socialmedia a {
     display: inline-block;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
     line-height: 0;
     text-decoration: none;
     transition: all 0.3s ease;
-    background-color: var(--primary-blue);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .socialmedia a:hover {
-    transform: scale(1.2) rotate(5deg);
-    box-shadow: 0 6px 20px rgba(26, 82, 118, 0.5);
+    transform: scale(1.15);
+    box-shadow: 0 4px 15px rgba(26, 82, 118, 0.3);
 }
 
 .socialmedia img {
     width: 40px;
     height: 40px;
     display: block;
-    filter: brightness(0) invert(1);
+    border-radius: 50%;
+    /* FILTRO ELIMINADO: Las imágenes ahora muestran sus colores originales */
 }
 
-.socialmedia a:nth-child(1) {
-    background-color: #1877f2;
-}
-
-.socialmedia a:nth-child(2) {
-    background-color: #0a66c2;
-}
-
-.socialmedia a:nth-child(3) {
-    background-color: #e4405f;
-}
-
-.socialmedia a:nth-child(1):hover {
-    background-color: #0d65d9;
-}
-
-.socialmedia a:nth-child(2):hover {
-    background-color: #0958a8;
-}
-
-.socialmedia a:nth-child(3):hover {
-    background-color: #d13a54;
-}
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -385,7 +364,7 @@ footer p {
     }
     
     .socialmedia a {
-        padding: 8px;
+        padding: 6px;
     }
 }
 
@@ -399,11 +378,11 @@ footer p {
     }
     
     .socialmedia img {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
     
     .socialmedia a {
-        padding: 7px;
+        padding: 5px;
     }
 }
